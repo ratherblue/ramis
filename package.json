@@ -1,0 +1,22 @@
+{
+  "name": "elastic",
+  "version": "0.0.1",
+  "description": "NodeJS Webhooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratherblue/elastic.git"
+  },
+  "author": "ratherblue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ratherblue/elastic/issues"
+  },
+  "homepage": "https://github.com/ratherblue/elastic#readme",
+  "dependencies": {
+    "eslint": "2.11.1"
+  }
+}

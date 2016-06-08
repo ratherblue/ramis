@@ -1,0 +1,12 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "spaced-comment": ["error", "always"]
+    },
+    "extends": "eslint:recommended"
+}
