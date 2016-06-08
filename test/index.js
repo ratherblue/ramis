@@ -3,6 +3,6 @@ var index = require('../src/index');
 
 describe('main', function() {
     it('should pass', function() {
-        expect(index.init()).to.equal(true);
+        expect(index.init()).to.equal(false);
     });
 });
