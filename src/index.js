@@ -12,3 +12,9 @@ server.listen(8080, function() {
     // Callback triggered when server is successfully listening. Hurray!
     console.log("Server listening on: http://localhost:%s", PORT); // eslint-disable-line no-console
 });
+
+
+exports.init = function() {
+    return false;
+
+};

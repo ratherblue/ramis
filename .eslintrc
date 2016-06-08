@@ -3,10 +3,12 @@
         "ecmaVersion": 6
     },
     "env": {
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "rules": {
-        "spaced-comment": ["error", "always"]
+        "spaced-comment": ["error", "always"],
+        "indent": ["error", 4]
     },
     "extends": "eslint:recommended"
 }

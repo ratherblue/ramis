@@ -4,7 +4,12 @@
   "description": "NodeJS Webhooks",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && eslint *.js"
+    "start": "node src/index.js",
+    "test": "npm run test:unit && npm run test:lint",
+    "test:unit": "mocha",
+    "test:lint": "eslint *.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info",
+    "coveralls": "npm run coverage | coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +21,12 @@
     "url": "https://github.com/ratherblue/ramis/issues"
   },
   "homepage": "https://github.com/ratherblue/ramis#readme",
-  "dependencies": {
+  "devDependencies": {
     "chai": "3.5.0",
+    "coveralls": "2.11.9",
     "eslint": "2.11.1",
-    "mocha": "2.5.3"
+    "istanbul": "0.4.3",
+    "mocha": "2.5.3",
+    "mocha-lcov-reporter": "1.2.0"
   }
 }
