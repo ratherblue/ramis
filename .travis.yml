@@ -3,3 +3,6 @@ language: node_js
 notifications:
   on_success: false
   on_failure: change
+
+after_script:
+  - npm run coveralls
