@@ -8,9 +8,8 @@
     "test": "npm run test:unit && npm run test:lint",
     "test:unit": "mocha",
     "test:lint": "eslint *.js",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info",
-    "_coveralls": "./node_modules/.bin/coveralls",
-    "coveralls": "npm run coverage | npm run _coveralls"
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && cat ./coverage/lcov.info",
+    "coveralls": "npm run coverage | coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,10 @@
     "url": "https://github.com/ratherblue/ramis/issues"
   },
   "homepage": "https://github.com/ratherblue/ramis#readme",
+  "dependencies": {
+    "ejs": "2.4.2",
+    "express": "4.13.4"
+  },
   "devDependencies": {
     "chai": "3.5.0",
     "coveralls": "2.11.9",
