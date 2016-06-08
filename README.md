@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Coverage Status][coverage-image][coverage-url]
+[![Coverage Status][coverage-image]][coverage-url]
 [![Dependencies][david-image]][david-url]
 [![Dependencies][david-dev-image]][david-dev-url]
 
