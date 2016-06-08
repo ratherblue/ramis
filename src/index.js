@@ -8,7 +8,7 @@ function handleRequest(request, response) {
 
 var server = http.createServer(handleRequest);
 
-server.listen({ port: PORT }, function() {
+server.listen(PORT, function() {
     // Callback triggered when server is successfully listening. Hurray!
     console.log("Server listening on: http://localhost:%s", PORT); // eslint-disable-line no-console
 });
