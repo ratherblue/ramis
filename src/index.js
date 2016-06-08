@@ -21,5 +21,5 @@ app.listen(port, function() {
 });
 
 exports.init = function() {
-    return true;
+    return false;
 };
