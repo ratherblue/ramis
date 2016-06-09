@@ -6,6 +6,7 @@ var app = express();
 
 const deployUrl = 'https://ramis-app.herokuapp.com';
 const port = process.env.PORT || 8080;
+const clientId = '368d97fad7902db3554c';
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
@@ -57,7 +58,7 @@ app.post('/event-handler', function(request) {
 
 app.get('/oauth', function(request, response) {
     var params = [
-        'client_id=368d97fad7902db3554c',
+        'client_id=' + clientId,
         'redirect_uri=' + deployUrl + '/oauth-success',
         'scope=public_repo'
     ];
