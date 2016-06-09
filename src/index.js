@@ -1,8 +1,10 @@
-var express = require('express'); var app = express();
+var express = require('express');
 var path = require('path');
 var https = require('https');
 
-var port = process.env.PORT || 8080;
+var app = express();
+
+const port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
