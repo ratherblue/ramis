@@ -14,14 +14,21 @@
         "comma-spacing": ["error", { "before": false, "after": true }],
         "complexity": ["error", 15],
         "eol-last": "error",
+        "eqeqeq": "error",
         "indent": ["error", 4],
         "keyword-spacing": "error",
         "max-len": ["error", 80],
         "newline-after-var": ["error", "always"],
         "newline-before-return": "error",
+        "no-alert": "error",
         "no-array-constructor": "error",
+        "no-eval": "error",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2, maxEOF: 1, "maxBOF": 0 }],
         "no-path-concat": "error",
         "no-spaced-func": "error",
+        "no-trailing-spaces": "error",
+        "no-whitespace-before-property": "error",
         "one-var": ["error", "never"],
         "one-var-declaration-per-line": ["error", "always"],
         "padded-blocks": ["error", "never"],
@@ -30,9 +37,7 @@
         "semi-spacing": ["error", { "before": false, "after": true }],
         "spaced-comment": ["error", "always"],
         "space-infix-ops": ["error"],
-        "no-multiple-empty-lines": ["error", { "max": 2, maxEOF: 1, "maxBOF": 0 }],
-        "no-trailing-spaces": "error",
-        "no-whitespace-before-property": "error"
+        "yoda": "error"
     },
     "extends": "eslint:recommended"
 }
