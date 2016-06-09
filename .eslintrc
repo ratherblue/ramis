@@ -8,7 +8,8 @@
     },
     "rules": {
         "spaced-comment": ["error", "always"],
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "quotes": ["error", "single"]
     },
     "extends": "eslint:recommended"
 }
