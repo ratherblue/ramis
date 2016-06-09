@@ -1,0 +1,10 @@
+{
+  "action": "opened",
+  "number": 3,
+  "pull_request": {
+    "user": { },
+    "head": {
+      "sha": "sha"
+    }
+  }
+}

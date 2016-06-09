@@ -6,3 +6,4 @@ describe('main', function() {
         expect(index.init()).to.equal(false);
     });
 });
+
