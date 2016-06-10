@@ -69,6 +69,7 @@ app.get('/oauth', function(request, response) {
 });
 
 app.get('/oauth-success', function(request, response) {
+    addWebHook();
     response.render(path.join(__dirname, 'views', 'success'));
 });
 
@@ -81,3 +82,37 @@ app.listen(port, function() {
 exports.init = function() {
     return false;
 };
+
+function addWebHook() {
+    // POST /repos/:owner/:repo/hooks
+
+    var postData = JSON.stringify({
+        'name': 'web',
+        'active': true,
+        'events': ['pull_request'],
+        'config': {
+            'url': 'http://ramis-app.herokuapp.com/event-handler',
+            'content_type': 'json'
+        }
+    });
+
+    var options = {
+        protocol: 'https:',
+        host: 'api.github.com',
+        path: '/repos/ratherblue/ramis/hooks?access_token=' +
+            process.env.GITHUB_AUTH_TOKEN,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(postData),
+            'User-Agent': 'Ramis-App'
+        }
+    };
+
+    var request = https.request(options, function(response) {
+        response.setEncoding('utf8');
+    });
+
+    request.write(postData);
+    request.end();
+}
